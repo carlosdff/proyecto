@@ -211,7 +211,7 @@ public class UsuariosArchivaldo extends javax.swing.JFrame {
            for(int i=0;i<ta;i++){
          tabla.setValueAt(GuardarUsuario.leer().get(i).getNombre(), i, 0);
          tabla.setValueAt(GuardarUsuario.leer().get(i).getEdad(), i, 1); 
-           tabla.setValueAt(GuardarUsuario.leer().get(i).getPregunta(), i, 2);
+           tabla.setValueAt(GuardarUsuario.leer().get(i).getEmail(), i, 2);
            }
         } catch (Exception ex) {
         System.out.println(ex.getMessage());
@@ -230,12 +230,12 @@ public class UsuariosArchivaldo extends javax.swing.JFrame {
             
             GuardarUsuario.guardar(new Usuario(textoNombre.getText(),
                     Integer.parseInt(textoEdad.getText()),
-                    textoPregunta.getText()));
+                    textoEmail.getText()));
             
             
             textoNombre.setText(null);
             textoEdad.setText(null);
-            textoPregunta.setText(null);
+            textoEmail.setText(null);
             
         } catch (Exception ex) {
             Logger.getLogger(UsuariosArchivaldo.class.getName()).log(Level.SEVERE, null, ex);
