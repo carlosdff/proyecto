@@ -230,12 +230,12 @@ public class UsuariosArchivaldo extends javax.swing.JFrame {
             
             GuardarUsuario.guardar(new Usuario(textoNombre.getText(),
                     Integer.parseInt(textoEdad.getText()),
-                    textoEmail.getText()));
+                    textoPregunta.getText()));
             
             
             textoNombre.setText(null);
             textoEdad.setText(null);
-            textoEmail.setText(null);
+            textoPregunta.setText(null);
             
         } catch (Exception ex) {
             Logger.getLogger(UsuariosArchivaldo.class.getName()).log(Level.SEVERE, null, ex);
