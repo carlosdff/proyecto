@@ -6,17 +6,24 @@
 
 package org.campitos.capitulo7;
 
-import java.io.Serializable;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 /**
  *
  * @author campitos
  */
 public class Usuario implements Serializable{
 String nombre;
-int edad;
-String email;
-
+String edad;
+ private ArrayList<Opcion> email;
+ 
+public Usuario(String nombre, String edad,ArrayList<Opcion> email ) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.email = email;
+    }
+ 
     public String getNombre() {
         return nombre;
     }
@@ -25,35 +32,30 @@ String email;
         this.nombre = nombre;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
-    public String getEmail() {
+    public ArrayList<Opcion> getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(ArrayList<Opcion> email) {
         this.email = email;
     }
+
+    
 
     
    
 
   
 
-    @Override
-    public String toString() {
-        return "Usuario{" + "nombre=" + nombre + ", edad=" + edad + ", email=" + email + '}';
-    }
-    public Usuario(String nombre, int edad, String email) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.email = email;
-    }
+  
+   
     
 }
